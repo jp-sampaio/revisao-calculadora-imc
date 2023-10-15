@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-general: 'Poppins', sans-serif;
+
+  --cl-one: #223240;
+  --cl-two: #3B8C66;
+  --cl-three: #347355;
+  --cl-four: #60BF81;
+  --cl-five: #9FD948;
+  --cl-six: #2232407a;
+
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--cl-four);
+}
+
+body,
+button,
+input {
+  font-size: 1.6rem;
+  font-family: var(--ff-general);
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+#my-app {
+  width: 32rem;
+  text-align: center;
+  color: #fff;
+  background-color: var(--cl-one);
+  padding: 1rem 2rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.041);
+}
+
+.screen-one header .conections,
+.screen-two header .conections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.screen-one header h1,
+.screen-two header h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.screen-two header h1 .ph {
+  font-size: 2rem;
+  position: absolute;
+  left: -4px;
+  top: 2px;
+}
+
+.gender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.gender .masculine,
+.gender .feminine {
+  background-color: var(--cl-three);
+  color: #ffffff;
+  padding: 3.5rem;
+  border-radius: .8rem;
+  cursor: pointer;
+  margin: 2rem -1rem;
+  transition: background-color .3s linear, transform .2s linear;
+}
+
+.gender .masculine:hover,
+.gender .feminine:hover {
+  background-color: var(--cl-two);
+  transform: scale(1.08);
+}
+
+.gender .masculine .ph,
+.gender .feminine .ph {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+.gender .masculine p,
+.gender .feminine p {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #ffffffd5;
+  margin-top: 1rem;
+}
+
+.height {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 2rem 4rem;
+  background-color: var(--cl-three);
+  cursor: pointer;
+  border-radius: .8rem;
+  transition: background-color .3s linear, transform .2s linear;
+}
+
+.height:hover {
+  transform: scale(1.06);
+  background-color: var(--cl-two);
+}
+
+.height .metrics-height {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  color: #ffffffd5;
+}
+
+.height .metrics-height .cm-number {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  color: #fff;
+}
+
+.height .metrics-height .cm {
+  font-size: 1.2rem;
+  text-transform: lowercase;
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--cl-five);
+  border-radius: 50%; 
+  margin-top: -.8rem;
+}
+
+.metrics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.metrics .weight,
+.metrics .age {
+  background-color: var(--cl-three);
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: .8rem;
+  cursor: pointer;
+  margin: 2rem 1rem;
+  transition: background-color .3s linear, transform .2s linear;
+}
+
+.metrics .weight:hover, 
+.metrics .age:hover {
+  transform: scale(1.06);
+  background-color: var(--cl-two);
+}
+
+.metrics .weight h2,
+.metrics .age h2 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #ffffffd5;
+  text-transform: uppercase;
+}
+
+.metrics .weight p,
+.metrics .age p {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  color: #fff;
+}
+
+.metrics .weight .buttons,
+.metrics .age .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.metrics .weight .buttons button,
+.metrics .age .buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cl-six);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.metrics .weight .buttons button:hover,
+.metrics .age .buttons button:hover {
+  background-color: var(--cl-one);
+}
+
+.metrics .weight .ph,
+.metrics .age .ph {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 900;
+}
+
+footer {
+  margin: 0 -2rem -2rem;
+}
+
+footer button {
+  background-color: var(--cl-five);
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  padding: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: filter .2s ease;
+}
+
+footer button:hover {
+  filter: brightness(1.1);
+}
+
+footer .bar {
+  border-bottom: 3px solid var(--cl-one);
+  border-radius: 2rem;
+  width: 60%;
+  margin: 1.5rem auto .5rem;
+}
+
+.screen-two main h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.screen-two main .result {
+  background-color: var(--cl-three);
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: .8rem;
+  cursor: pointer;
+  margin: 2rem 0;
+}
+
+.screen-two main .result .level {
+  color: var(--cl-five);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 2rem;
+}
+
+.screen-two main .result .value {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: .8rem;
+}
+
+.screen-two main .result .message {
+  margin: 3rem auto;
+  width: 100%;
+  font-weight: 300;
+}
+
+.alert-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cl-five);
+  text-align: center;
+  padding: .8rem 0;
+  font-weight: 700;
+  letter-spacing: .4rem;
+  color: #fff;
+  transform: translateY(-4.5rem);
+  transition: transform .3s linear;
+}
+
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* fazer um background que se mexe atrás da calculadora */

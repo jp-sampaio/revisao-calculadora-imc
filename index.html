@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora IMC</title>
+  
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="alert-error">
+    Digite somente números!
+  </div>
+  <div id="my-app">
+    <div class="screen-one">
+      <header>
+        <div class="conections">
+          <span class="hours">08:30</span>
+          <div class="icons">
+            <i class="ph ph-dots-three"></i>
+            <i class="ph ph-wifi-high"></i>
+            <i class="ph ph-battery-full"></i>
+          </div>
+        </div>
+        <h1>Calculadora de IMC</h1>
+      </header>
+      <main>
+        <section class="gender">
+          <button class="masculine">
+            <i class="ph ph-gender-male"></i>
+            <p>Homem</p>
+          </button>
+          <button class="feminine">
+            <i class="ph ph-gender-female"></i>
+            <p>Mulher</p>
+          </button>
+        </section>
+        <section class="height">
+          <div class="metrics-height">
+            <span>Altura</span> 
+            <div>
+              <span class="cm-number">115</span>
+              <span class="cm">cm</span>
+            </div>
+          </div>
+          <input type="range" id="height" max="230">
+        </section>
+        <section class="metrics">
+          <div class="weight">
+            <h2>peso</h2>
+            <p>60</p>
+            <div class="buttons">
+              <button class="plus-one">
+                <i class="ph ph-plus"></i>
+              </button>
+              <button class="minus-one">
+                <i class="ph ph-minus"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="age">
+            <h2>idade</h2>
+            <p>25</p>
+            <div class="buttons">
+              <button class="plus-two">
+                <i class="ph ph-plus"></i>
+              </button>
+              <button class="minus-two">
+                <i class="ph ph-minus"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <button>
+          Calcular
+          <div class="bar"></div>
+        </button>
+      </footer>
+    </div>
+<!-- ================================================================================================= -->
+    <div class="screen-two hide">
+      <header>
+        <div class="conections">
+          <span class="hours">08:30</span>
+          <div class="icons">
+            <i class="ph ph-dots-three"></i>
+            <i class="ph ph-wifi-high"></i>
+            <i class="ph ph-battery-full"></i>
+          </div>
+        </div>
+        <h1>
+          <i class="ph ph-caret-left"></i>
+          Calculadora de IMC
+        </h1>
+      </header>
+      <main>
+        <h2>Resultado</h2>
+
+        <section class="result">
+          <p class="level">Abaixo do Peso</p>
+          <p class="value">15.2</p>
+          <span class="result-gender"></span>
+          <span class="result-age"></span>
+          <p class="message">
+            Você está abaixo do peso, melhor pensar em como melhorar a sua alimentação.
+          </p>
+        </section>
+      </main>
+      <footer>
+        <button>
+          Novo Cálculo
+          <div class="bar"></div>
+        </button>
+      </footer>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
